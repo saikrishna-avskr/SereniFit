@@ -4,7 +4,7 @@ from helper import *
 import time
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:3000", "http://localhost:5173", "http://127.0.0.1:3000", "http://127.0.0.1:5173", "http://13.71.95.26:5173", "https://wellsync.avsaikrishna.com"])
+CORS(app, origins=["http://localhost:3000", "http://localhost:5173", "http://127.0.0.1:3000", "http://127.0.0.1:5173", "http://13.71.95.26:5173", "https://wellsync.avsaikrishna.dev"])
 
 # Register Diet Blueprint
 from diet_routes import diet_bp
@@ -20,7 +20,7 @@ app.register_blueprint(profile_bp)
 
 @app.route('/')
 def home():
-    return redirect("https://wellsync.avsaikrishna.com", code=302)
+    return redirect("https://wellsync.avsaikrishna.dev", code=302)
 
 @app.route('/voice')
 # @cross_origin()
